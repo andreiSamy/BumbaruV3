@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Usa : MonoBehaviour
 {
-    
+
     public Animator doorAnim;
+
+    [SerializeField] private AudioSource doorOpenAudioSource = null;
+    [SerializeField] private float openDelay = 0;
+
+    [SerializeField] private AudioSource doorCloseAudioSource = null;
+    [SerializeField] private float closeDelay = 0;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +20,8 @@ public class Usa : MonoBehaviour
         {
             doorAnim.SetTrigger("open");
             Debug.Log("deshis");
-         
+            doorOpenAudioSource.PlayDelayed(openDelay);
+
         }
 
 
@@ -25,7 +33,7 @@ public class Usa : MonoBehaviour
         {
             doorAnim.SetTrigger("close");
 
-
+            doorOpenAudioSource.PlayDelayed(closeDelay);
         }
     }
 }
