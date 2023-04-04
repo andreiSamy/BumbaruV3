@@ -11,8 +11,16 @@ public class LevelSelector : MonoBehaviour
         
     }
 
-    public void OpenScene() {
+    public void Openl() {
         SceneManager.LoadScene("Level1");
+    }
+    public void Openlv()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+    public void Openlvl()
+    {
+        SceneManager.LoadScene("Level3");
     }
 
     public void Back()
