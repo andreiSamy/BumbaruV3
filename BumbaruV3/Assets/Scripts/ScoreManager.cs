@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
